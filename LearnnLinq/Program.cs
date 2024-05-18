@@ -292,12 +292,12 @@
             //}
 
 
-            List<Employee> employees = new List<Employee>()
-            {
-                    new Employee() {Id =1, Name="Varim", Email="test1@gmail.com"},
-                    new Employee() {Id =3, Name="Rahim", Email="test2@gmail.com"},
-                    new Employee() {Id =2, Name="Rahuma", Email="test3@gmail.com"},
-            };
+            //List<Employee> employees = new List<Employee>()
+            //{
+            //        new Employee() {Id =1, Name="Varim", Email="test1@gmail.com"},
+            //        new Employee() {Id =3, Name="Rahim", Email="test2@gmail.com"},
+            //        new Employee() {Id =2, Name="Rahuma", Email="test3@gmail.com"},
+            //};
             //var methodSyntax = employees.OrderBy(emp => emp.Name).ToList();
             //var querySyntax = (from emp in employees
             //                   orderby emp.Name
@@ -310,20 +310,203 @@
 
 
             //OrderByDescending
-            var dataSourceInt = new List<int>() { 34, 42, 3, 6, 7, 5, 100, 67, 1, 56 };
-            var methodSyntax = dataSourceInt.OrderByDescending(num => num).ToList();
-            var querySyntax = (from num in dataSourceInt
-                               where num < 10
-                               orderby num descending
-                               select num).ToList();
-            foreach (var item in querySyntax)
-            {
-                Console.WriteLine($"querySyntax: {item} : {item}");
-            }
+            //var dataSourceInt = new List<int>() { 34, 42, 3, 6, 7, 5, 100, 67, 1, 56 };
+            //var methodSyntax = dataSourceInt.OrderByDescending(num => num).ToList();
+            //var querySyntax = (from num in dataSourceInt
+            //                   where num < 10
+            //                   orderby num descending
+            //                   select num).ToList();
+            //foreach (var item in querySyntax)
+            //{
+            //    Console.WriteLine($"querySyntax: {item} : {item}");
+            //}
 
+            //var methodSyntax = employees.OrderByDescending(emp => emp.Id ).ToList();
+            //foreach (var item in methodSyntax)
+            //{
+            //    Console.WriteLine($"querySyntax: {item.Id} : {item.Name}");
+            //}
+
+
+            //Thenby
+
+            //List<Employee> employees = new List<Employee>()
+            //{
+            //        new Employee() {
+            //            Id =1, 
+            //            Name="Varim", 
+            //            Email="test1@gmail.com",
+            //            Firstname= "Rahim",
+            //            Lastname= "Kuddus"
+            //        },
+            //        new Employee() {
+            //            Id =3, 
+            //            Name="Rahim", 
+            //            Email="test2@gmail.com",
+            //            Firstname= "Rahim",
+            //            Lastname= "Aria"
+            //        },
+            //        new Employee() {
+            //            Id =6, 
+            //            Name="Rahuma", 
+            //            Email="test3@gmail.com",
+            //            Firstname= "Karim",
+            //            Lastname= "Bakker"
+            //        },
+            //        new Employee() {
+            //            Id =4,
+            //            Name="Rahuma",
+            //            Email="test3@gmail.com",
+            //            Firstname= "Karim",
+            //            Lastname= "Juel"
+            //        },
+            //       new Employee() {
+            //            Id =5,
+            //            Name="Rahuma",
+            //            Email="test3@gmail.com",
+            //            Firstname= "Test name",
+            //            Lastname= "Khalek"
+            //        },
+            //};
+
+            //var ms = employees.OrderBy(emp => emp.Firstname).ThenBy(emp => emp.Id).ToList();
+
+            //var qs = (from emp in employees
+            //          orderby emp.Firstname, emp.Id
+            //          select emp).ToList();
+
+            //foreach (var item in qs)
+            //{
+            //    Console.WriteLine($"qs----> Id: {item.Id}, Firstname: {item.Firstname}, Lastname:{item.Lastname}");
+            //}
+
+
+            //Reverse
+            //List<string> strList = new List<string>() { "Adan", "Jim", "Kim", "Jiks"};
+
+            //foreach (var item in strList)
+            //{
+            //    Console.WriteLine($"Before----> {item}");
+            //}
+
+            //strList.Reverse();
+
+            //foreach (var item in strList)
+            //{
+            //    Console.WriteLine($"After----> {item}");
+            //}
+
+
+            //I want to reserved method but no efect on main list.
+
+            //List<string> strList = new List<string>() { "Adan", "Jim", "Kim", "Jiks" };
+
+            //foreach (var item in strList)
+            //{
+            //    Console.WriteLine($"Before----> {item}");
+            //}
+
+            ////strList.Reverse();
+
+            //var reserved = strList.AsEnumerable().Reverse();
+
+            //foreach (var item in reserved)
+            //{
+            //    Console.WriteLine($"After----> {item}");
+            //}
+
+            //All
+            Student[] students =
+            {
+                new Student()
+                {
+                    StudentId = 1,
+                    FullName = "Kim",
+                    Marks = 90,
+                    Subject = new List<Subject>(){
+                        new Subject(){
+                          SubjectName = "Math",
+                          SubjectMarks = 73
+                        },
+                        new Subject(){
+                        SubjectName = "English",
+                        SubjectMarks = 80,
+                        },
+                        new Subject(){
+                          SubjectName = "Bangla",
+                          SubjectMarks = 85,
+                        },
+                        new Subject(){
+                          SubjectName = "Science",
+                          SubjectMarks = 78,
+                        }
+                    }
+                },
+                new Student()
+                {
+                    StudentId = 2,
+                    FullName = "Lee",
+                    Marks = 79,
+                    Subject = new List<Subject>(){
+                        new Subject(){
+                          SubjectName = "Math",
+                          SubjectMarks = 86
+                        },
+                        new Subject(){
+                        SubjectName = "English",
+                        SubjectMarks = 88,
+                        },
+                         new Subject(){
+                          SubjectName = "Bangla",
+                          SubjectMarks = 90,
+                        },
+                        new Subject(){
+                          SubjectName = "Science",
+                          SubjectMarks = 82,
+                        }
+                    }
+                },
+                new Student()
+                {
+                    StudentId = 3,
+                    FullName = "Jhon",
+                    Marks = 88,
+                    Subject = new List<Subject>(){
+                        new Subject(){
+                          SubjectName = "Math",
+                          SubjectMarks = 90
+                        },
+                        new Subject(){
+                        SubjectName = "English",
+                        SubjectMarks = 95,
+                        },
+                         new Subject(){
+                          SubjectName = "Bangla",
+                          SubjectMarks = 84,
+                        },
+                        new Subject(){
+                          SubjectName = "Science",
+                          SubjectMarks = 71,
+                        }
+                    }
+                }
+            };
+
+            //var ms = students.Where(std => std.Subject.All(x => x.SubjectMarks > 70)).ToList();
+
+            //var qs = (from std in students
+            //          where std.Subject.All(x => x.SubjectMarks > 80)
+            //          select std).ToList();
+            //Console.WriteLine(qs.Count);
+
+            //Any
+
+            var ms = students.Any(x => x.Marks > 97);
+            Console.WriteLine(ms);
 
             Console.ReadLine();
         }
+
     }
 }
 

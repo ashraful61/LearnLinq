@@ -11,6 +11,14 @@ namespace LearnnLinq
         public int StudentId { get; set; }
         public string StEmail { get; set; }
         public string FullName { get; set; }
+        public int Marks { get; set; }
+        public List<Subject> Subject { get; set; }
 
+    }
+
+    public class Subject
+    {
+        public string SubjectName { get; set; }
+        public int SubjectMarks { get; set; }
     }
 }
