@@ -416,81 +416,81 @@
             //}
 
             //All
-            Student[] students =
-            {
-                new Student()
-                {
-                    StudentId = 1,
-                    FullName = "Kim",
-                    Marks = 90,
-                    Subject = new List<Subject>(){
-                        new Subject(){
-                          SubjectName = "Math",
-                          SubjectMarks = 73
-                        },
-                        new Subject(){
-                        SubjectName = "English",
-                        SubjectMarks = 80,
-                        },
-                        new Subject(){
-                          SubjectName = "Bangla",
-                          SubjectMarks = 85,
-                        },
-                        new Subject(){
-                          SubjectName = "Science",
-                          SubjectMarks = 78,
-                        }
-                    }
-                },
-                new Student()
-                {
-                    StudentId = 2,
-                    FullName = "Lee",
-                    Marks = 79,
-                    Subject = new List<Subject>(){
-                        new Subject(){
-                          SubjectName = "Math",
-                          SubjectMarks = 86
-                        },
-                        new Subject(){
-                        SubjectName = "English",
-                        SubjectMarks = 88,
-                        },
-                         new Subject(){
-                          SubjectName = "Bangla",
-                          SubjectMarks = 90,
-                        },
-                        new Subject(){
-                          SubjectName = "Science",
-                          SubjectMarks = 82,
-                        }
-                    }
-                },
-                new Student()
-                {
-                    StudentId = 3,
-                    FullName = "Jhon",
-                    Marks = 88,
-                    Subject = new List<Subject>(){
-                        new Subject(){
-                          SubjectName = "Math",
-                          SubjectMarks = 90
-                        },
-                        new Subject(){
-                        SubjectName = "English",
-                        SubjectMarks = 95,
-                        },
-                         new Subject(){
-                          SubjectName = "Bangla",
-                          SubjectMarks = 84,
-                        },
-                        new Subject(){
-                          SubjectName = "Science",
-                          SubjectMarks = 71,
-                        }
-                    }
-                }
-            };
+            //Student[] students =
+            //{
+            //    new Student()
+            //    {
+            //        StudentId = 1,
+            //        FullName = "Kim",
+            //        Marks = 90,
+            //        Subject = new List<Subject>(){
+            //            new Subject(){
+            //              SubjectName = "Math",
+            //              SubjectMarks = 73
+            //            },
+            //            new Subject(){
+            //            SubjectName = "English",
+            //            SubjectMarks = 80,
+            //            },
+            //            new Subject(){
+            //              SubjectName = "Bangla",
+            //              SubjectMarks = 85,
+            //            },
+            //            new Subject(){
+            //              SubjectName = "Science",
+            //              SubjectMarks = 78,
+            //            }
+            //        }
+            //    },
+            //    new Student()
+            //    {
+            //        StudentId = 2,
+            //        FullName = "Lee",
+            //        Marks = 79,
+            //        Subject = new List<Subject>(){
+            //            new Subject(){
+            //              SubjectName = "Math",
+            //              SubjectMarks = 86
+            //            },
+            //            new Subject(){
+            //            SubjectName = "English",
+            //            SubjectMarks = 88,
+            //            },
+            //             new Subject(){
+            //              SubjectName = "Bangla",
+            //              SubjectMarks = 90,
+            //            },
+            //            new Subject(){
+            //              SubjectName = "Science",
+            //              SubjectMarks = 82,
+            //            }
+            //        }
+            //    },
+            //    new Student()
+            //    {
+            //        StudentId = 3,
+            //        FullName = "Jhon",
+            //        Marks = 88,
+            //        Subject = new List<Subject>(){
+            //            new Subject(){
+            //              SubjectName = "Math",
+            //              SubjectMarks = 90
+            //            },
+            //            new Subject(){
+            //            SubjectName = "English",
+            //            SubjectMarks = 95,
+            //            },
+            //             new Subject(){
+            //              SubjectName = "Bangla",
+            //              SubjectMarks = 84,
+            //            },
+            //            new Subject(){
+            //              SubjectName = "Science",
+            //              SubjectMarks = 71,
+            //            }
+            //        }
+            //    }
+            //};
 
             //var ms = students.Where(std => std.Subject.All(x => x.SubjectMarks > 70)).ToList();
 
@@ -501,8 +501,256 @@
 
             //Any
 
-            var ms = students.Any(x => x.Marks > 97);
+            //var ms = students.Any(x => x.Marks > 97);
+            //Console.WriteLine(ms);
+
+            var students = new List<Student>()
+            {
+                new Student()
+                {
+                    Id = 1,
+                    Name = "Test1",
+                    AddressId = 1,
+                    CategoryId = 1,
+                },
+                 new Student()
+                {
+                    Id = 2,
+                    Name = "Test2",
+                    AddressId = 0,
+                    CategoryId = 1,
+                },
+                  new Student()
+                {
+                    Id = 3,
+                    Name = "Test3",
+                    AddressId = 3,
+                    CategoryId = 2,
+                },
+                   new Student()
+                {
+                    Id = 4,
+                    Name = "Test4",
+                    AddressId = 0,
+                    CategoryId = 2,
+                },
+                new Student()
+                {
+                    Id = 5,
+                    Name = "Test5",
+                    AddressId = 5,
+                    CategoryId = 3,
+                },
+              new Student()
+                {
+                    Id = 6,
+                    Name = "Test6",
+                    AddressId = 0,
+                    CategoryId = 3,
+                },
+            };
+
+
+            var addresses = new List<Address>()
+            {
+                new Address()
+                {
+                    Id = 1,
+                    AddressLine = "Line1"
+                },
+                  new Address()
+                {
+                    Id = 2,
+                    AddressLine = "Line2"
+                },
+                 new Address()
+                {
+                    Id = 3,
+                    AddressLine = "Line3"
+                },
+                 new Address()
+                {
+                    Id = 4,
+                    AddressLine = "Line4"
+                },
+                new Address()
+                {
+                    Id = 5,
+                    AddressLine = "Line5"
+                },
+            };
+
+            var marks = new List<Marks>() {
+             new Marks()
+             {
+                 Id = 1,
+                 StudentId = 1,
+                 TotalMarks = 90,
+             },
+              new Marks()
+             {
+                 Id = 2,
+                 StudentId = 2,
+                 TotalMarks = 89,
+             },
+               new Marks()
+             {
+                 Id = 3,
+                 StudentId = 3,
+                 TotalMarks = 88,
+             },
+                new Marks()
+             {
+                 Id = 4,
+                 StudentId = 4,
+                 TotalMarks = 87,
+             },
+                 new Marks()
+             {
+                 Id = 5,
+                 StudentId = 5,
+                 TotalMarks = 86,
+             }
+            };
+
+
+            var categories = new List<Category>()
+            {
+                new Category()
+                {
+                    Id = 1,
+                    Name = "Laptop"
+                },
+                  new Category()
+                {
+                    Id = 2,
+                    Name = "Phone"
+                },
+                 new Category()
+                {
+                    Id = 3,
+                    Name = "Desktop"
+                },
+            };
+
+
+            //var qs = (from student in students
+            //          join address in addresses
+            //          on student.AddressId equals address.Id
+            //          select new
+            //          {
+            //              StudentId = student.Id,
+            //              StudentName = student.Name,
+            //              AddressName = address.AddressLine
+            //          }
+            //               ).ToList();
+
+            //var ms = students.Join(addresses,
+            //    std => std.AddressId,
+            //    address => address.Id,
+            //    (std, address) => new
+            //    {
+            //        StudentId = std.Id,
+            //        StudentName = std.Name,
+            //        AddressName = address.AddressLine
+            //    }).ToList();
+
+
+            //var qs = (from student in students
+            //          join address in addresses
+            //          on student.AddressId equals address.Id
+            //          join mark in marks
+            //          on student.Id equals mark.StudentId
+            //          select new
+            //          {
+            //              StudentId = student.Id,
+            //              StudentName = student.Name,
+            //              AddressName = address.AddressLine,
+            //              StudentMarks = mark.TotalMarks
+            //          }).ToList();
+
+            //var ms = students
+            //    .Join(
+            //        addresses,
+            //        student => student.AddressId,
+            //        address => address.Id,
+            //        (student, address) => new { student, address }
+            //    )
+            //    .Join(
+            //        marks,
+            //        sa => sa.student.Id,
+            //        mark => mark.StudentId,
+            //        (sa, mark) => new
+            //        {
+            //            StudentId = sa.student.Id,
+            //            StudentName = sa.student.Name,
+            //            AddressName = sa.address.AddressLine,
+            //            StudentMarks = mark.TotalMarks
+            //        }
+            //    )
+            //    .ToList();
+
+            //var ms = categories.GroupJoin(students, category => category.Id, 
+            //                                        student => student.CategoryId,
+            //                                        (category, student) => new 
+            //                                        { 
+            //                                            category, 
+            //                                            student 
+            //                                        }).ToList();
+
+            //var qs = (from category in categories
+            //          join student in students
+            //          on category.Id equals student.CategoryId into studentGroup
+            //          select new
+            //          {
+            //              category,
+            //              student = studentGroup
+            //          }).ToList();
+
+
+            //foreach (var item in qs)
+            //{
+            //    Console.WriteLine(item.category.Name + "<=====Category======>");
+
+            //    foreach (var item1 in item.student)
+            //    {
+            //        Console.WriteLine(item1.Name + "=====>s");   
+            //    }
+
+
+            //}
+
+            //var qs = (from std in students
+            //          join add in addresses
+            //          on std.AddressId equals add.Id into studentAdress
+            //          from stdAddress in studentAdress.DefaultIfEmpty()
+            //          select new { std, stdAddress }).ToList();
+
+
+            //var ms = students
+            //        .GroupJoin(
+            //            addresses,
+            //            std => std.AddressId,
+            //            add => add.Id,
+            //            (std, studentAddress) => new { std, studentAddress }
+            //        )
+            //        .SelectMany(
+            //            x => x.studentAddress.DefaultIfEmpty(),
+            //            (x, stdAddress) => new { std = x.std, stdAddress }
+            //        )
+            //        .ToList();
+
+
+            var numbers = new List<int>() { 1,2,3,4,5,6,7,8,9};
+
+            //var ms = numbers.Where(x => x > 4).ElementAtOrDefault(1); 
+            //var ms2 = students.ElementAtOrDefault(3);
+
+            var ms = numbers.First( x => x > 4);
+            var ms2 = numbers.FirstOrDefault(x => x > 4);
+
             Console.WriteLine(ms);
+
 
             Console.ReadLine();
         }

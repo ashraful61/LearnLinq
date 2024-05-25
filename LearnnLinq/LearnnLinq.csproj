@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\DotnetV2\LearnnLinq\LearnnLinq\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\DotnetV2\LearnnLinq\LearnnLinq\.editorconfig" />
+  </ItemGroup>
+
 </Project>
